@@ -37,8 +37,8 @@
           <!-- Dynamic menu items will be added here -->
         </div>
         <div class="auth-links" id="authLinks">
-          <a href="#" id="loginBtn">Đăng nhập</a>
-          <a href="#" id="registerBtn">Đăng ký</a>
+          <a href="Login.html" id="loginBtn">Đăng nhập</a>
+          <a href="SignUp.html" id="registerBtn">Đăng ký</a>
           <a href="#" id="logoutBtn" class="hidden">Đăng xuất</a>
         </div>
       </div>
@@ -133,162 +133,12 @@
             </div>
           </section>
 
-        <!-- Phần đăng nhập -->
-        <div id="loginContent" class="hidden">
-          <div class="form-container">
-            <h2>Đăng nhập</h2>
-            <form id="loginForm">
-              <div class="form-group">
-                <label for="username">Tên đăng nhập:</label>
-                <input
-                  type="text"
-                  id="username"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="password">Mật khẩu:</label>
-                <input
-                  type="password"
-                  id="password"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <button type="submit" class="btn btn-block">Đăng nhập</button>
-              <p style="text-align: center; margin-top: 20px">
-                Chưa có tài khoản?
-                <a href="#" id="switchToRegister" style="color: var(--primary)"
-                  >Đăng ký ngay</a
-                >
-              </p>
-            </form>
-          </div>
-        </div>
+        
 
-        <!-- Phần đăng ký -->
-        <div id="registerContent" class="hidden">
-          <div class="form-container">
-            <h2>Đăng ký tài khoản</h2>
-            <form id="registerForm">
-              <div class="form-group">
-                <label for="reg-fullname">Họ và tên:</label>
-                <input
-                  type="text"
-                  id="reg-fullname"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="reg-email">Email:</label>
-                <input
-                  type="email"
-                  id="reg-email"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="reg-phone">Số điện thoại:</label>
-                <input
-                  type="tel"
-                  id="reg-phone"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="reg-username">Tên đăng nhập:</label>
-                <input
-                  type="text"
-                  id="reg-username"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="reg-password">Mật khẩu:</label>
-                <input
-                  type="password"
-                  id="reg-password"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="reg-confirm-password">Xác nhận mật khẩu:</label>
-                <input
-                  type="password"
-                  id="reg-confirm-password"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <button type="submit" class="btn btn-block">Đăng ký</button>
-              <p style="text-align: center; margin-top: 20px">
-                Đã có tài khoản?
-                <a href="#" id="switchToLogin" style="color: var(--primary)"
-                  >Đăng nhập</a
-                >
-              </p>
-            </form>
-          </div>
-        </div>
+        
 
         <!-- Nội dung cho người dùng -->
-        <div id="userContent" class="hidden">
-          <h2 class="section-title">Quản lý sự kiện</h2>
-
-          <div class="tab-container">
-            <div class="tabs">
-              <div class="tab active" data-tab="registerEvent">
-                Đăng ký sự kiện
-              </div>
-              <div class="tab" data-tab="viewEvents">
-                Xem sự kiện đã đăng ký
-              </div>
-              <div class="tab" data-tab="payment">Thanh toán</div>
-            </div>
-
-            <div id="registerEvent" class="tab-content active">
-              <div class="form-container" style="max-width: 100%">
-                <h3 style="text-align: center; margin-bottom: 25px">
-                  Đăng ký sự kiện mới
-                </h3>
-                <form id="eventRegistrationForm">
-                  <div class="form-group">
-                    <label for="event-name">Tên người đăng ký:</label>
-                    <input
-                      type="text"
-                      id="event-name"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="event-type">Loại sự kiện:</label>
-                    <select id="event-type" class="form-control" required>
-                      <option value="">-- Chọn loại sự kiện --</option>
-                      <option value="Hội nghị">Hội nghị</option>
-                      <option value="Tiệc cưới">Tiệc cưới</option>
-                      <option value="Sinh nhật">Sinh nhật</option>
-                      <option value="Workshop">Workshop</option>
-                      <option value="Hội thảo">Hội thảo</option>
-                      <option value="Team Building">Team Building</option>
-                      <option value="Ra mắt sản phẩm">Ra mắt sản phẩm</option>
-                      <option value="Khác">Khác</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="event-start-date">Ng</label>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </main>
 <!--footer-->
