@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(to right, #87d5e9, #2575fc);
+    margin: 0;
+    
+}
+/* Căn giữa biểu mẫu trong màn hình */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Đảm bảo container chiếm toàn bộ chiều cao màn hình */
+    border: 1px solid red;
+}
+/* Form người dùng và quản lý */
+.form-customer,
+.form-admin {
+    border: 1px solid grey;
+    padding: 20px;
+    width: 500px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Đảm bảo các form ban đầu ẩn */
+.customer,
+.admin {
+    display: none;
+}
+
+/* Khi có lớp 'active', form sẽ hiển thị */
+.form-customer.active .customer,
+.form-admin.active .admin {
+    display: block;
+}
