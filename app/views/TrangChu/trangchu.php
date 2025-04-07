@@ -8,7 +8,7 @@
       content="Công ty QNP - Chuyên tổ chức sự kiện chuyên nghiệp tại Việt Nam"
     />
     <title>Công ty QNP - Quản lý Sự kiện Chuyên nghiệp</title>
-    <link rel="stylesheet" href="/public/assets/CSS/trangchu.css" />
+    <link rel="stylesheet" href="/Quan_Ly_Su_Kien/public/assets/CSS/trangchu.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -731,6 +731,6 @@
       </div>
     </footer>
 
-    <script src="/public/assets/JS/trangchu.js"></script>
+    <script src="/Quan_Ly_Su_Kien/public/assets/JS/trangchu.js"></script>
   </body>
 </html>

@@ -6,7 +6,7 @@
   <title>Hệ thống Quản lý Thanh toán</title>
   <!-- Bootstrap CSS (tùy chọn, dùng để tối ưu giao diện) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/public/assets/CSS/quanly.css">
+  <link rel="stylesheet" href="/Quan_Ly_Su_Kien/public/assets/CSS/quanly.css">
   
 </head>
 <body>
@@ -870,4 +870,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
   </body>
 </html>
->>>>>>> 923f71330b0d1a3a553fc695c5da77ba6ebea7f5
