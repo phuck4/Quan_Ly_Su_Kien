@@ -35,7 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#viewEvents">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="tab"
+                data-bs-target="#viewEvents"
+              >
                 <i class="fas fa-list me-1"></i> Sự kiện đã đăng ký
               </a>
             </li>
@@ -59,12 +64,24 @@
         <div class="tab-pane fade show active" id="registerEvent">
           <div class="row">
             <div class="col-md-12 mb-4">
-              <div class="alert alert-success alert-dismissible fade" id="successAlert" role="alert">
-                <i class="fas fa-check-circle me-2"></i> Đăng ký sự kiện thành công! Bạn sẽ được chuyển đến trang thanh toán.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              <div
+                class="alert alert-success alert-dismissible fade"
+                id="successAlert"
+                role="alert"
+              >
+                <i class="fas fa-check-circle me-2"></i> Đăng ký sự kiện thành
+                công! Bạn sẽ được chuyển đến trang thanh toán.
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
               </div>
               <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
                   <h5 class="mb-0">
                     <i class="fas fa-plus-circle me-2"></i>Đăng ký sự kiện mới
                   </h5>
@@ -74,73 +91,147 @@
                     <div class="row mb-3">
                       <div class="col-md-6">
                         <label class="form-label">Tên người đăng ký</label>
-                        <input type="text" class="form-control" required aria-label="username" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          aria-label="username"
+                        />
                       </div>
                       <div class="col-md-6">
                         <label class="form-label">Số điện thoại</label>
-                        <input type="tel" class="form-control" pattern="[0-9]{10}" required aria-label="sdt" />
+                        <input
+                          type="tel"
+                          class="form-control"
+                          pattern="[0-9]{10}"
+                          required
+                          aria-label="sdt"
+                        />
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-md-6">
                         <label class="form-label">Nơi tổ chức</label>
-                        <input type="text" class="form-control" required aria-label="noitochuc" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          aria-label="noitochuc"
+                        />
                       </div>
                       <div class="col-md-6">
                         <label class="form-label">Tên sự kiện</label>
-                        <input type="text" class="form-control" required aria-label="tensk" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          aria-label="tensk"
+                        />
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-md-6">
                         <label class="form-label">Thời gian bắt đầu</label>
-                        <input type="datetime-local" class="form-control" required aria-label="TGBatdau" />
+                        <input
+                          type="datetime-local"
+                          class="form-control"
+                          required
+                          aria-label="TGBatdau"
+                        />
                       </div>
                       <div class="col-md-6">
                         <label class="form-label">Thời gian kết thúc</label>
-                        <input type="datetime-local" class="form-control" required aria-label="TGKetThuc" />
+                        <input
+                          type="datetime-local"
+                          class="form-control"
+                          required
+                          aria-label="TGKetThuc"
+                        />
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-md-6">
                         <label class="form-label">Loại sự kiện</label>
-                        <select class="form-select" id="eventType" required aria-label="loaiSK">
+                        <select
+                          class="form-select"
+                          id="eventType"
+                          required
+                          aria-label="loaiSK"
+                        >
                           <option value="">-- Chọn loại sự kiện --</option>
-                          <option value="hoinghi" data-price="15000000">Hội nghị</option>
-                          <option value="tieccuoi" data-price="45000000">Tiệc cưới</option>
-                          <option value="sinhnhat" data-price="5000000">Sinh nhật</option>
-                          <option value="workshop" data-price="8500000">Workshop</option>
-                          <option value="hoithao" data-price="12000000">Hội thảo</option>
-                          <option value="teambuilding" data-price="20000000">Team Building</option>
-                          <option value="ramatsp" data-price="30000000">Ra mắt sản phẩm</option>
-                          <option value="khac" data-price="10000000">Khác</option>
+                          <option value="hoinghi" data-price="15000000">
+                            Hội nghị
+                          </option>
+                          <option value="tieccuoi" data-price="45000000">
+                            Tiệc cưới
+                          </option>
+                          <option value="sinhnhat" data-price="5000000">
+                            Sinh nhật
+                          </option>
+                          <option value="workshop" data-price="8500000">
+                            Workshop
+                          </option>
+                          <option value="hoithao" data-price="12000000">
+                            Hội thảo
+                          </option>
+                          <option value="teambuilding" data-price="20000000">
+                            Team Building
+                          </option>
+                          <option value="ramatsp" data-price="30000000">
+                            Ra mắt sản phẩm
+                          </option>
+                          <option value="khac" data-price="10000000">
+                            Khác
+                          </option>
                         </select>
                       </div>
                       <div class="col-md-6">
-                        <label class="form-label">Số lượng người tham dự (dự kiến)</label>
-                        <input type="number" class="form-control" id="attendees" min="1" required aria-label="nguoiThamDu" />
+                        <label class="form-label"
+                          >Số lượng người tham dự (dự kiến)</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="attendees"
+                          min="1"
+                          required
+                          aria-label="nguoiThamDu"
+                        />
                       </div>
                     </div>
-                    <div class="mb-3" id="priceInfoContainer" style="display: none">
+                    <div
+                      class="mb-3"
+                      id="priceInfoContainer"
+                      style="display: none"
+                    >
                       <div class="alert alert-info">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
                           <div>
                             <h6 class="mb-0">
-                              <i class="fas fa-info-circle me-2"></i>Chi phí dự kiến:
+                              <i class="fas fa-info-circle me-2"></i>Chi phí dự
+                              kiến:
                             </h6>
                             <p class="mb-0" id="priceDetails">
                               Giá cơ bản: <span id="basePrice">0</span> VNĐ
                             </p>
                           </div>
                           <div>
-                            <h5 class="mb-0 text-primary" id="totalPrice">0 VNĐ</h5>
+                            <h5 class="mb-0 text-primary" id="totalPrice">
+                              0 VNĐ
+                            </h5>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Mô tả chi tiết sự kiện</label>
-                      <textarea class="form-control" rows="3" aria-label="mota"></textarea>
+                      <textarea
+                        class="form-control"
+                        rows="3"
+                        aria-label="mota"
+                      ></textarea>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                       <button type="reset" class="btn btn-light">
@@ -160,7 +251,9 @@
         <!-- Xem sự kiện đã đăng ký -->
         <div class="tab-pane fade" id="viewEvents">
           <div class="card">
-            <div class="card-header d-flex justify-content-between align-items-center">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
               <h5 class="mb-0">
                 <i class="fas fa-list me-2"></i>Danh sách sự kiện đã đăng ký
               </h5>
@@ -198,10 +291,17 @@
                       <td>Trung tâm Hội nghị Quốc gia</td>
                       <td>15,000,000 VNĐ</td>
                       <td>
-                        <span class="event-status status-confirmed">Đã xác nhận</span>
+                        <span class="event-status status-confirmed"
+                          >Đã xác nhận</span
+                        >
                       </td>
                       <td>
-                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventDetailModal" aria-label="btn">
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#eventDetailModal"
+                          aria-label="btn"
+                        >
                           <i class="fas fa-eye"></i>
                         </button>
                       </td>
@@ -214,10 +314,17 @@
                       <td>Khách sạn Metropole</td>
                       <td>45,000,000 VNĐ</td>
                       <td>
-                        <span class="event-status status-pending">Chờ xác nhận</span>
+                        <span class="event-status status-pending"
+                          >Chờ xác nhận</span
+                        >
                       </td>
                       <td>
-                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventDetailModal" aria-label="btn">
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#eventDetailModal"
+                          aria-label="btn"
+                        >
                           <i class="fas fa-eye"></i>
                         </button>
                       </td>
@@ -230,10 +337,17 @@
                       <td>Trung tâm đào tạo XYZ</td>
                       <td>8,500,000 VNĐ</td>
                       <td>
-                        <span class="event-status status-completed">Đã hoàn thành</span>
+                        <span class="event-status status-completed"
+                          >Đã hoàn thành</span
+                        >
                       </td>
                       <td>
-                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventDetailModal" aria-label="btn">
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#eventDetailModal"
+                          aria-label="btn"
+                        >
                           <i class="fas fa-eye"></i>
                         </button>
                       </td>
@@ -248,9 +362,17 @@
           <div class="modal fade" id="eventDetailModal" tabindex="-1">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
-                <div class="modal-header" style="background: var(--bg-gradient); color: white">
+                <div
+                  class="modal-header"
+                  style="background: var(--bg-gradient); color: white"
+                >
                   <h5 class="modal-title">Chi tiết sự kiện</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">
                   <div class="row">
@@ -265,12 +387,20 @@
                     </div>
                     <div class="col-md-6">
                       <h6>Thời gian và địa điểm</h6>
-                      <p><strong>Thời gian bắt đầu:</strong> 15/04/2025 08:00</p>
-                      <p><strong>Thời gian kết thúc:</strong> 15/04/2025 17:00</p>
-                      <p><strong>Địa điểm:</strong> Trung tâm Hội nghị Quốc gia</p>
+                      <p>
+                        <strong>Thời gian bắt đầu:</strong> 15/04/2025 08:00
+                      </p>
+                      <p>
+                        <strong>Thời gian kết thúc:</strong> 15/04/2025 17:00
+                      </p>
+                      <p>
+                        <strong>Địa điểm:</strong> Trung tâm Hội nghị Quốc gia
+                      </p>
                       <p>
                         <strong>Trạng thái:</strong>
-                        <span class="event-status status-confirmed">Đã xác nhận</span>
+                        <span class="event-status status-confirmed"
+                          >Đã xác nhận</span
+                        >
                       </p>
                       <p><strong>Giá tiền:</strong> 15,000,000 VNĐ</p>
                       <p><strong>Đã thanh toán:</strong> 7,500,000 VNĐ (50%)</p>
@@ -280,14 +410,20 @@
                   <div class="row">
                     <div class="col-12">
                       <h6>Mô tả chi tiết</h6>
-                      <p>Hội nghị khoa học về công nghệ thông tin và trí tuệ nhân tạo, với sự tham gia của các chuyên gia hàng đầu trong lĩnh vực.</p>
+                      <p>
+                        Hội nghị khoa học về công nghệ thông tin và trí tuệ nhân
+                        tạo, với sự tham gia của các chuyên gia hàng đầu trong
+                        lĩnh vực.
+                      </p>
                       <h6>Lịch sử cập nhật</h6>
                       <ul class="list-group">
                         <li class="list-group-item">
-                          <small class="text-muted">05/04/2025 10:23</small> - Đã đăng ký sự kiện
+                          <small class="text-muted">05/04/2025 10:23</small> -
+                          Đã đăng ký sự kiện
                         </li>
                         <li class="list-group-item">
-                          <small class="text-muted">05/04/2025 11:45</small> - Đã thanh toán 50% đặt cọc
+                          <small class="text-muted">05/04/2025 11:45</small> -
+                          Đã thanh toán 50% đặt cọc
                         </li>
                       </ul>
                     </div>
@@ -323,7 +459,9 @@
                     </p>
                     <p class="mb-1">
                       <strong>Thời gian:</strong>
-                      <span id="paymentEventTime">20/05/2025 18:00 - 22:00</span>
+                      <span id="paymentEventTime"
+                        >20/05/2025 18:00 - 22:00</span
+                      >
                     </p>
                   </div>
                   <div class="col-md-6">
@@ -337,7 +475,9 @@
                     </p>
                     <p class="mb-1">
                       <strong>Trạng thái:</strong>
-                      <span class="event-status status-pending">Chờ thanh toán</span>
+                      <span class="event-status status-pending"
+                        >Chờ thanh toán</span
+                      >
                     </p>
                   </div>
                 </div>
@@ -347,9 +487,16 @@
               <div class="payment-methods">
                 <div class="payment-option" id="cashPayment">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="cashMethod" checked />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="paymentMethod"
+                      id="cashMethod"
+                      checked
+                    />
                     <label class="form-check-label" for="cashMethod">
-                      <i class="fas fa-money-bill-wave me-2"></i>Thanh toán tiền mặt
+                      <i class="fas fa-money-bill-wave me-2"></i>Thanh toán tiền
+                      mặt
                     </label>
                   </div>
                   <div class="payment-details mt-3">
@@ -364,9 +511,15 @@
 
                 <div class="payment-option mt-3" id="bankTransfer">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="bankMethod" />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="paymentMethod"
+                      id="bankMethod"
+                    />
                     <label class="form-check-label" for="bankMethod">
-                      <i class="fas fa-university me-2"></i>Chuyển khoản ngân hàng
+                      <i class="fas fa-university me-2"></i>Chuyển khoản ngân
+                      hàng
                     </label>
                   </div>
                   <div class="payment-details mt-3" style="display: none">
@@ -375,10 +528,19 @@
                         <div class="card mb-3">
                           <div class="card-body">
                             <h6 class="card-title">Thông tin chuyển khoản</h6>
-                            <p class="mb-1"><strong>Ngân hàng:</strong> Vietcombank</p>
-                            <p class="mb-1"><strong>Số tài khoản:</strong> 1234567890</p>
-                            <p class="mb-1"><strong>Chủ tài khoản:</strong> Công ty Quản lý Sự kiện XYZ</p>
-                            <p class="mb-1"><strong>Nội dung CK:</strong> SK002_NguyenVanA</p>
+                            <p class="mb-1">
+                              <strong>Ngân hàng:</strong> Vietcombank
+                            </p>
+                            <p class="mb-1">
+                              <strong>Số tài khoản:</strong> 1234567890
+                            </p>
+                            <p class="mb-1">
+                              <strong>Chủ tài khoản:</strong> Công ty Quản lý Sự
+                              kiện XYZ
+                            </p>
+                            <p class="mb-1">
+                              <strong>Nội dung CK:</strong> SK002_NguyenVanA
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -386,8 +548,14 @@
                         <div class="card">
                           <div class="card-body text-center">
                             <h6 class="card-title">Quét mã QR</h6>
-                            <img src="/api/placeholder/200/200" alt="QR Code" class="img-fluid qr-code" />
-                            <p class="mt-2 small text-muted">Sử dụng ứng dụng ngân hàng để quét mã QR</p>
+                            <img
+                              src="/api/placeholder/200/200"
+                              alt="QR Code"
+                              class="img-fluid qr-code"
+                            />
+                            <p class="mt-2 small text-muted">
+                              Sử dụng ứng dụng ngân hàng để quét mã QR
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -398,10 +566,18 @@
                 <div class="mt-4">
                   <hr />
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button type="button" class="btn btn-light" id="cancelPayment">
+                    <button
+                      type="button"
+                      class="btn btn-light"
+                      id="cancelPayment"
+                    >
                       <i class="fas fa-times me-1"></i> Hủy bỏ
                     </button>
-                    <button type="button" class="btn btn-primary" id="confirmPayment">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="confirmPayment"
+                    >
                       <i class="fas fa-check me-1"></i> Xác nhận thanh toán
                     </button>
                   </div>
@@ -421,18 +597,32 @@
             <h5 class="modal-title">
               <i class="fas fa-check-circle me-2"></i>Thanh toán thành công
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body text-center">
             <div class="my-4">
-              <i class="fas fa-check-circle text-success" style="font-size: 80px"></i>
+              <i
+                class="fas fa-check-circle text-success"
+                style="font-size: 80px"
+              ></i>
               <h4 class="mt-3">Thanh toán đã được xác nhận!</h4>
               <p>Mã thanh toán: <strong>#PAY12345</strong></p>
               <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</p>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Đóng</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Đóng
+            </button>
           </div>
         </div>
       </div>
@@ -479,7 +669,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#viewEvents">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="tab"
+                data-bs-target="#viewEvents"
+              >
                 <i class="fas fa-list me-1"></i> Sự kiện đã đăng ký
               </a>
             </li>
@@ -503,12 +698,24 @@
         <div class="tab-pane fade show active" id="registerEvent">
           <div class="row">
             <div class="col-md-12 mb-4">
-              <div class="alert alert-success alert-dismissible fade" id="successAlert" role="alert">
-                <i class="fas fa-check-circle me-2"></i> Đăng ký sự kiện thành công! Bạn sẽ được chuyển đến trang thanh toán.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              <div
+                class="alert alert-success alert-dismissible fade"
+                id="successAlert"
+                role="alert"
+              >
+                <i class="fas fa-check-circle me-2"></i> Đăng ký sự kiện thành
+                công! Bạn sẽ được chuyển đến trang thanh toán.
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
               </div>
               <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
                   <h5 class="mb-0">
                     <i class="fas fa-plus-circle me-2"></i>Đăng ký sự kiện mới
                   </h5>
@@ -518,73 +725,147 @@
                     <div class="row mb-3">
                       <div class="col-md-6">
                         <label class="form-label">Tên người đăng ký</label>
-                        <input type="text" class="form-control" required aria-label="username" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          aria-label="username"
+                        />
                       </div>
                       <div class="col-md-6">
                         <label class="form-label">Số điện thoại</label>
-                        <input type="tel" class="form-control" pattern="[0-9]{10}" required aria-label="sdt" />
+                        <input
+                          type="tel"
+                          class="form-control"
+                          pattern="[0-9]{10}"
+                          required
+                          aria-label="sdt"
+                        />
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-md-6">
                         <label class="form-label">Nơi tổ chức</label>
-                        <input type="text" class="form-control" required aria-label="noitochuc" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          aria-label="noitochuc"
+                        />
                       </div>
                       <div class="col-md-6">
                         <label class="form-label">Tên sự kiện</label>
-                        <input type="text" class="form-control" required aria-label="tensk" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          aria-label="tensk"
+                        />
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-md-6">
                         <label class="form-label">Thời gian bắt đầu</label>
-                        <input type="datetime-local" class="form-control" required aria-label="TGBatdau" />
+                        <input
+                          type="datetime-local"
+                          class="form-control"
+                          required
+                          aria-label="TGBatdau"
+                        />
                       </div>
                       <div class="col-md-6">
                         <label class="form-label">Thời gian kết thúc</label>
-                        <input type="datetime-local" class="form-control" required aria-label="TGKetThuc" />
+                        <input
+                          type="datetime-local"
+                          class="form-control"
+                          required
+                          aria-label="TGKetThuc"
+                        />
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-md-6">
                         <label class="form-label">Loại sự kiện</label>
-                        <select class="form-select" id="eventType" required aria-label="loaiSK">
+                        <select
+                          class="form-select"
+                          id="eventType"
+                          required
+                          aria-label="loaiSK"
+                        >
                           <option value="">-- Chọn loại sự kiện --</option>
-                          <option value="hoinghi" data-price="15000000">Hội nghị</option>
-                          <option value="tieccuoi" data-price="45000000">Tiệc cưới</option>
-                          <option value="sinhnhat" data-price="5000000">Sinh nhật</option>
-                          <option value="workshop" data-price="8500000">Workshop</option>
-                          <option value="hoithao" data-price="12000000">Hội thảo</option>
-                          <option value="teambuilding" data-price="20000000">Team Building</option>
-                          <option value="ramatsp" data-price="30000000">Ra mắt sản phẩm</option>
-                          <option value="khac" data-price="10000000">Khác</option>
+                          <option value="hoinghi" data-price="15000000">
+                            Hội nghị
+                          </option>
+                          <option value="tieccuoi" data-price="45000000">
+                            Tiệc cưới
+                          </option>
+                          <option value="sinhnhat" data-price="5000000">
+                            Sinh nhật
+                          </option>
+                          <option value="workshop" data-price="8500000">
+                            Workshop
+                          </option>
+                          <option value="hoithao" data-price="12000000">
+                            Hội thảo
+                          </option>
+                          <option value="teambuilding" data-price="20000000">
+                            Team Building
+                          </option>
+                          <option value="ramatsp" data-price="30000000">
+                            Ra mắt sản phẩm
+                          </option>
+                          <option value="khac" data-price="10000000">
+                            Khác
+                          </option>
                         </select>
                       </div>
                       <div class="col-md-6">
-                        <label class="form-label">Số lượng người tham dự (dự kiến)</label>
-                        <input type="number" class="form-control" id="attendees" min="1" required aria-label="nguoiThamDu" />
+                        <label class="form-label"
+                          >Số lượng người tham dự (dự kiến)</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="attendees"
+                          min="1"
+                          required
+                          aria-label="nguoiThamDu"
+                        />
                       </div>
                     </div>
-                    <div class="mb-3" id="priceInfoContainer" style="display: none">
+                    <div
+                      class="mb-3"
+                      id="priceInfoContainer"
+                      style="display: none"
+                    >
                       <div class="alert alert-info">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
                           <div>
                             <h6 class="mb-0">
-                              <i class="fas fa-info-circle me-2"></i>Chi phí dự kiến:
+                              <i class="fas fa-info-circle me-2"></i>Chi phí dự
+                              kiến:
                             </h6>
                             <p class="mb-0" id="priceDetails">
                               Giá cơ bản: <span id="basePrice">0</span> VNĐ
                             </p>
                           </div>
                           <div>
-                            <h5 class="mb-0 text-primary" id="totalPrice">0 VNĐ</h5>
+                            <h5 class="mb-0 text-primary" id="totalPrice">
+                              0 VNĐ
+                            </h5>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Mô tả chi tiết sự kiện</label>
-                      <textarea class="form-control" rows="3" aria-label="mota"></textarea>
+                      <textarea
+                        class="form-control"
+                        rows="3"
+                        aria-label="mota"
+                      ></textarea>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                       <button type="reset" class="btn btn-light">
@@ -604,7 +885,9 @@
         <!-- Xem sự kiện đã đăng ký -->
         <div class="tab-pane fade" id="viewEvents">
           <div class="card">
-            <div class="card-header d-flex justify-content-between align-items-center">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
               <h5 class="mb-0">
                 <i class="fas fa-list me-2"></i>Danh sách sự kiện đã đăng ký
               </h5>
@@ -642,10 +925,17 @@
                       <td>Trung tâm Hội nghị Quốc gia</td>
                       <td>15,000,000 VNĐ</td>
                       <td>
-                        <span class="event-status status-confirmed">Đã xác nhận</span>
+                        <span class="event-status status-confirmed"
+                          >Đã xác nhận</span
+                        >
                       </td>
                       <td>
-                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventDetailModal" aria-label="btn">
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#eventDetailModal"
+                          aria-label="btn"
+                        >
                           <i class="fas fa-eye"></i>
                         </button>
                       </td>
@@ -658,10 +948,17 @@
                       <td>Khách sạn Metropole</td>
                       <td>45,000,000 VNĐ</td>
                       <td>
-                        <span class="event-status status-pending">Chờ xác nhận</span>
+                        <span class="event-status status-pending"
+                          >Chờ xác nhận</span
+                        >
                       </td>
                       <td>
-                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventDetailModal" aria-label="btn">
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#eventDetailModal"
+                          aria-label="btn"
+                        >
                           <i class="fas fa-eye"></i>
                         </button>
                       </td>
@@ -674,10 +971,17 @@
                       <td>Trung tâm đào tạo XYZ</td>
                       <td>8,500,000 VNĐ</td>
                       <td>
-                        <span class="event-status status-completed">Đã hoàn thành</span>
+                        <span class="event-status status-completed"
+                          >Đã hoàn thành</span
+                        >
                       </td>
                       <td>
-                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventDetailModal" aria-label="btn">
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#eventDetailModal"
+                          aria-label="btn"
+                        >
                           <i class="fas fa-eye"></i>
                         </button>
                       </td>
@@ -692,9 +996,17 @@
           <div class="modal fade" id="eventDetailModal" tabindex="-1">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
-                <div class="modal-header" style="background: var(--bg-gradient); color: white">
+                <div
+                  class="modal-header"
+                  style="background: var(--bg-gradient); color: white"
+                >
                   <h5 class="modal-title">Chi tiết sự kiện</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">
                   <div class="row">
@@ -709,12 +1021,20 @@
                     </div>
                     <div class="col-md-6">
                       <h6>Thời gian và địa điểm</h6>
-                      <p><strong>Thời gian bắt đầu:</strong> 15/04/2025 08:00</p>
-                      <p><strong>Thời gian kết thúc:</strong> 15/04/2025 17:00</p>
-                      <p><strong>Địa điểm:</strong> Trung tâm Hội nghị Quốc gia</p>
+                      <p>
+                        <strong>Thời gian bắt đầu:</strong> 15/04/2025 08:00
+                      </p>
+                      <p>
+                        <strong>Thời gian kết thúc:</strong> 15/04/2025 17:00
+                      </p>
+                      <p>
+                        <strong>Địa điểm:</strong> Trung tâm Hội nghị Quốc gia
+                      </p>
                       <p>
                         <strong>Trạng thái:</strong>
-                        <span class="event-status status-confirmed">Đã xác nhận</span>
+                        <span class="event-status status-confirmed"
+                          >Đã xác nhận</span
+                        >
                       </p>
                       <p><strong>Giá tiền:</strong> 15,000,000 VNĐ</p>
                       <p><strong>Đã thanh toán:</strong> 7,500,000 VNĐ (50%)</p>
@@ -724,14 +1044,20 @@
                   <div class="row">
                     <div class="col-12">
                       <h6>Mô tả chi tiết</h6>
-                      <p>Hội nghị khoa học về công nghệ thông tin và trí tuệ nhân tạo, với sự tham gia của các chuyên gia hàng đầu trong lĩnh vực.</p>
+                      <p>
+                        Hội nghị khoa học về công nghệ thông tin và trí tuệ nhân
+                        tạo, với sự tham gia của các chuyên gia hàng đầu trong
+                        lĩnh vực.
+                      </p>
                       <h6>Lịch sử cập nhật</h6>
                       <ul class="list-group">
                         <li class="list-group-item">
-                          <small class="text-muted">05/04/2025 10:23</small> - Đã đăng ký sự kiện
+                          <small class="text-muted">05/04/2025 10:23</small> -
+                          Đã đăng ký sự kiện
                         </li>
                         <li class="list-group-item">
-                          <small class="text-muted">05/04/2025 11:45</small> - Đã thanh toán 50% đặt cọc
+                          <small class="text-muted">05/04/2025 11:45</small> -
+                          Đã thanh toán 50% đặt cọc
                         </li>
                       </ul>
                     </div>
@@ -767,7 +1093,9 @@
                     </p>
                     <p class="mb-1">
                       <strong>Thời gian:</strong>
-                      <span id="paymentEventTime">20/05/2025 18:00 - 22:00</span>
+                      <span id="paymentEventTime"
+                        >20/05/2025 18:00 - 22:00</span
+                      >
                     </p>
                   </div>
                   <div class="col-md-6">
@@ -781,7 +1109,9 @@
                     </p>
                     <p class="mb-1">
                       <strong>Trạng thái:</strong>
-                      <span class="event-status status-pending">Chờ thanh toán</span>
+                      <span class="event-status status-pending"
+                        >Chờ thanh toán</span
+                      >
                     </p>
                   </div>
                 </div>
@@ -791,9 +1121,16 @@
               <div class="payment-methods">
                 <div class="payment-option" id="cashPayment">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="cashMethod" checked />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="paymentMethod"
+                      id="cashMethod"
+                      checked
+                    />
                     <label class="form-check-label" for="cashMethod">
-                      <i class="fas fa-money-bill-wave me-2"></i>Thanh toán tiền mặt
+                      <i class="fas fa-money-bill-wave me-2"></i>Thanh toán tiền
+                      mặt
                     </label>
                   </div>
                   <div class="payment-details mt-3">
@@ -808,9 +1145,15 @@
 
                 <div class="payment-option mt-3" id="bankTransfer">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="bankMethod" />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="paymentMethod"
+                      id="bankMethod"
+                    />
                     <label class="form-check-label" for="bankMethod">
-                      <i class="fas fa-university me-2"></i>Chuyển khoản ngân hàng
+                      <i class="fas fa-university me-2"></i>Chuyển khoản ngân
+                      hàng
                     </label>
                   </div>
                   <div class="payment-details mt-3" style="display: none">
@@ -819,10 +1162,19 @@
                         <div class="card mb-3">
                           <div class="card-body">
                             <h6 class="card-title">Thông tin chuyển khoản</h6>
-                            <p class="mb-1"><strong>Ngân hàng:</strong> Vietcombank</p>
-                            <p class="mb-1"><strong>Số tài khoản:</strong> 1234567890</p>
-                            <p class="mb-1"><strong>Chủ tài khoản:</strong> Công ty Quản lý Sự kiện XYZ</p>
-                            <p class="mb-1"><strong>Nội dung CK:</strong> SK002_NguyenVanA</p>
+                            <p class="mb-1">
+                              <strong>Ngân hàng:</strong> Vietcombank
+                            </p>
+                            <p class="mb-1">
+                              <strong>Số tài khoản:</strong> 1234567890
+                            </p>
+                            <p class="mb-1">
+                              <strong>Chủ tài khoản:</strong> Công ty Quản lý Sự
+                              kiện XYZ
+                            </p>
+                            <p class="mb-1">
+                              <strong>Nội dung CK:</strong> SK002_NguyenVanA
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -830,8 +1182,14 @@
                         <div class="card">
                           <div class="card-body text-center">
                             <h6 class="card-title">Quét mã QR</h6>
-                            <img src="/api/placeholder/200/200" alt="QR Code" class="img-fluid qr-code" />
-                            <p class="mt-2 small text-muted">Sử dụng ứng dụng ngân hàng để quét mã QR</p>
+                            <img
+                              src="/api/placeholder/200/200"
+                              alt="QR Code"
+                              class="img-fluid qr-code"
+                            />
+                            <p class="mt-2 small text-muted">
+                              Sử dụng ứng dụng ngân hàng để quét mã QR
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -842,10 +1200,18 @@
                 <div class="mt-4">
                   <hr />
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button type="button" class="btn btn-light" id="cancelPayment">
+                    <button
+                      type="button"
+                      class="btn btn-light"
+                      id="cancelPayment"
+                    >
                       <i class="fas fa-times me-1"></i> Hủy bỏ
                     </button>
-                    <button type="button" class="btn btn-primary" id="confirmPayment">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="confirmPayment"
+                    >
                       <i class="fas fa-check me-1"></i> Xác nhận thanh toán
                     </button>
                   </div>
@@ -865,18 +1231,32 @@
             <h5 class="modal-title">
               <i class="fas fa-check-circle me-2"></i>Thanh toán thành công
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body text-center">
             <div class="my-4">
-              <i class="fas fa-check-circle text-success" style="font-size: 80px"></i>
+              <i
+                class="fas fa-check-circle text-success"
+                style="font-size: 80px"
+              ></i>
               <h4 class="mt-3">Thanh toán đã được xác nhận!</h4>
               <p>Mã thanh toán: <strong>#PAY12345</strong></p>
               <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</p>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Đóng</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Đóng
+            </button>
           </div>
         </div>
       </div>
@@ -885,4 +1265,3 @@
     <script src="/public/assets/JS/user.js"></script>
   </body>
 </html>
->>>>>>> 923f71330b0d1a3a553fc695c5da77ba6ebea7f5

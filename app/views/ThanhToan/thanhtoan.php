@@ -77,13 +77,26 @@
             <div class="row">
               <div class="col-md-6">
                 <p class="mb-1"><strong>Mã sự kiện:</strong> SK002</p>
-                <p class="mb-1"><strong>Tên sự kiện:</strong> Tiệc cưới Nguyễn Văn A</p>
-                <p class="mb-1"><strong>Thời gian:</strong> 20/05/2025 18:00 - 22:00</p>
+                <p class="mb-1">
+                  <strong>Tên sự kiện:</strong> Tiệc cưới Nguyễn Văn A
+                </p>
+                <p class="mb-1">
+                  <strong>Thời gian:</strong> 20/05/2025 18:00 - 22:00
+                </p>
               </div>
               <div class="col-md-6">
-                <p class="mb-1"><strong>Tổng số tiền:</strong> 45,000,000 VNĐ</p>
-                <p class="mb-1"><strong>Cần thanh toán:</strong> 22,500,000 VNĐ</p>
-                <p class="mb-1"><strong>Trạng thái:</strong> <span class="payment-status text-warning">Chờ thanh toán</span></p>
+                <p class="mb-1">
+                  <strong>Tổng số tiền:</strong> 45,000,000 VNĐ
+                </p>
+                <p class="mb-1">
+                  <strong>Cần thanh toán:</strong> 22,500,000 VNĐ
+                </p>
+                <p class="mb-1">
+                  <strong>Trạng thái:</strong>
+                  <span class="payment-status text-warning"
+                    >Chờ thanh toán</span
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -91,7 +104,7 @@
           <!-- Progress bar (nếu cần thiết) -->
           <div class="mb-4">
             <div class="progress">
-              <div class="progress-bar" style="width: 50%;"></div>
+              <div class="progress-bar" style="width: 50%"></div>
             </div>
           </div>
 
@@ -105,7 +118,13 @@
               <div class="card border-primary mb-3">
                 <div class="card-header">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="cashMethod" checked />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="paymentMethod"
+                      id="cashMethod"
+                      checked
+                    />
                     <label class="form-check-label" for="cashMethod">
                       <i class="fas fa-money-bill-wave me-2"></i>Tiền mặt
                     </label>
@@ -113,11 +132,18 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">
-                    <i class="fas fa-map-marker-alt me-2"></i>Thanh toán trực tiếp
+                    <i class="fas fa-map-marker-alt me-2"></i>Thanh toán trực
+                    tiếp
                   </h5>
                   <ul class="list-unstyled">
-                    <li><i class="fas fa-building me-2"></i>Số 123 Đường ABC, Quận 1, TP.HCM</li>
-                    <li><i class="fas fa-clock me-2"></i>Thứ 2 - Thứ 6: 8:00 - 17:00</li>
+                    <li>
+                      <i class="fas fa-building me-2"></i>Số 123 Đường ABC, Quận
+                      1, TP.HCM
+                    </li>
+                    <li>
+                      <i class="fas fa-clock me-2"></i>Thứ 2 - Thứ 6: 8:00 -
+                      17:00
+                    </li>
                     <li><i class="fas fa-phone me-2"></i>028 1234 5678</li>
                   </ul>
                 </div>
@@ -129,7 +155,12 @@
               <div class="card border-primary mb-3">
                 <div class="card-header">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="bankMethod" />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="paymentMethod"
+                      id="bankMethod"
+                    />
                     <label class="form-check-label" for="bankMethod">
                       <i class="fas fa-university me-2"></i>Chuyển khoản
                     </label>
@@ -138,7 +169,10 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">
-                      <h5><i class="fas fa-info-circle me-2"></i>Thông tin tài khoản</h5>
+                      <h5>
+                        <i class="fas fa-info-circle me-2"></i>Thông tin tài
+                        khoản
+                      </h5>
                       <ul class="list-unstyled">
                         <li>Ngân hàng: Vietcombank</li>
                         <li>Số TK: 123456789</li>
@@ -148,7 +182,11 @@
                     </div>
                     <div class="col-md-6 text-center">
                       <h5><i class="fas fa-qrcode me-2"></i>QR Code</h5>
-                      <img src="https://fsviet.com/image/data/ma-qr-code-la-gi1.jpg" alt="QR Code" class="img-fluid mb-2" />
+                      <img
+                        src="https://fsviet.com/image/data/ma-qr-code-la-gi1.jpg"
+                        alt="QR Code"
+                        class="img-fluid mb-2"
+                      />
                       <p class="small text-muted">Quét mã để thanh toán</p>
                     </div>
                   </div>
@@ -178,10 +216,18 @@
             <h5 class="modal-title">
               <i class="fas fa-check-circle me-2"></i>Thanh toán thành công
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body text-center">
-            <i class="fas fa-check-circle text-success mb-4" style="font-size: 60px;"></i>
+            <i
+              class="fas fa-check-circle text-success mb-4"
+              style="font-size: 60px"
+            ></i>
             <h4>Đã thanh toán thành công!</h4>
             <p class="text-muted">Mã giao dịch: #PAY123456</p>
           </div>
@@ -278,13 +324,26 @@
             <div class="row">
               <div class="col-md-6">
                 <p class="mb-1"><strong>Mã sự kiện:</strong> SK002</p>
-                <p class="mb-1"><strong>Tên sự kiện:</strong> Tiệc cưới Nguyễn Văn A</p>
-                <p class="mb-1"><strong>Thời gian:</strong> 20/05/2025 18:00 - 22:00</p>
+                <p class="mb-1">
+                  <strong>Tên sự kiện:</strong> Tiệc cưới Nguyễn Văn A
+                </p>
+                <p class="mb-1">
+                  <strong>Thời gian:</strong> 20/05/2025 18:00 - 22:00
+                </p>
               </div>
               <div class="col-md-6">
-                <p class="mb-1"><strong>Tổng số tiền:</strong> 45,000,000 VNĐ</p>
-                <p class="mb-1"><strong>Cần thanh toán:</strong> 22,500,000 VNĐ</p>
-                <p class="mb-1"><strong>Trạng thái:</strong> <span class="payment-status text-warning">Chờ thanh toán</span></p>
+                <p class="mb-1">
+                  <strong>Tổng số tiền:</strong> 45,000,000 VNĐ
+                </p>
+                <p class="mb-1">
+                  <strong>Cần thanh toán:</strong> 22,500,000 VNĐ
+                </p>
+                <p class="mb-1">
+                  <strong>Trạng thái:</strong>
+                  <span class="payment-status text-warning"
+                    >Chờ thanh toán</span
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -292,7 +351,7 @@
           <!-- Progress bar (nếu cần thiết) -->
           <div class="mb-4">
             <div class="progress">
-              <div class="progress-bar" style="width: 50%;"></div>
+              <div class="progress-bar" style="width: 50%"></div>
             </div>
           </div>
 
@@ -306,7 +365,13 @@
               <div class="card border-primary mb-3">
                 <div class="card-header">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="cashMethod" checked />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="paymentMethod"
+                      id="cashMethod"
+                      checked
+                    />
                     <label class="form-check-label" for="cashMethod">
                       <i class="fas fa-money-bill-wave me-2"></i>Tiền mặt
                     </label>
@@ -314,11 +379,18 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">
-                    <i class="fas fa-map-marker-alt me-2"></i>Thanh toán trực tiếp
+                    <i class="fas fa-map-marker-alt me-2"></i>Thanh toán trực
+                    tiếp
                   </h5>
                   <ul class="list-unstyled">
-                    <li><i class="fas fa-building me-2"></i>Số 123 Đường ABC, Quận 1, TP.HCM</li>
-                    <li><i class="fas fa-clock me-2"></i>Thứ 2 - Thứ 6: 8:00 - 17:00</li>
+                    <li>
+                      <i class="fas fa-building me-2"></i>Số 123 Đường ABC, Quận
+                      1, TP.HCM
+                    </li>
+                    <li>
+                      <i class="fas fa-clock me-2"></i>Thứ 2 - Thứ 6: 8:00 -
+                      17:00
+                    </li>
                     <li><i class="fas fa-phone me-2"></i>028 1234 5678</li>
                   </ul>
                 </div>
@@ -330,7 +402,12 @@
               <div class="card border-primary mb-3">
                 <div class="card-header">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="bankMethod" />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="paymentMethod"
+                      id="bankMethod"
+                    />
                     <label class="form-check-label" for="bankMethod">
                       <i class="fas fa-university me-2"></i>Chuyển khoản
                     </label>
@@ -339,7 +416,10 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">
-                      <h5><i class="fas fa-info-circle me-2"></i>Thông tin tài khoản</h5>
+                      <h5>
+                        <i class="fas fa-info-circle me-2"></i>Thông tin tài
+                        khoản
+                      </h5>
                       <ul class="list-unstyled">
                         <li>Ngân hàng: Vietcombank</li>
                         <li>Số TK: 123456789</li>
@@ -349,7 +429,11 @@
                     </div>
                     <div class="col-md-6 text-center">
                       <h5><i class="fas fa-qrcode me-2"></i>QR Code</h5>
-                      <img src="https://fsviet.com/image/data/ma-qr-code-la-gi1.jpg" alt="QR Code" class="img-fluid mb-2" />
+                      <img
+                        src="https://fsviet.com/image/data/ma-qr-code-la-gi1.jpg"
+                        alt="QR Code"
+                        class="img-fluid mb-2"
+                      />
                       <p class="small text-muted">Quét mã để thanh toán</p>
                     </div>
                   </div>
@@ -379,10 +463,18 @@
             <h5 class="modal-title">
               <i class="fas fa-check-circle me-2"></i>Thanh toán thành công
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body text-center">
-            <i class="fas fa-check-circle text-success mb-4" style="font-size: 60px;"></i>
+            <i
+              class="fas fa-check-circle text-success mb-4"
+              style="font-size: 60px"
+            ></i>
             <h4>Đã thanh toán thành công!</h4>
             <p class="text-muted">Mã giao dịch: #PAY123456</p>
           </div>
@@ -399,4 +491,3 @@
     <script src="/public/assets/JS/thanhtoan.js"></script>
   </body>
 </html>
->>>>>>> 923f71330b0d1a3a553fc695c5da77ba6ebea7f5
