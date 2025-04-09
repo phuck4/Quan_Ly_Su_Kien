@@ -66,11 +66,10 @@
                   <tr>
                     <th>Mã sự kiện</th>
                     <th>Tên sự kiện</th>
+                    <th>Loại sự kiện</th>
                     <th>Khách hàng</th>
                     <th>Tổng tiền</th>
-                    <th>Đã thanh toán</th>
                     <th>Trạng thái</th>
-                    <th>Hành động</th>
                   </tr>
                 </thead>
                 <tbody id="paymentData">
