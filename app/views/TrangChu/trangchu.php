@@ -53,8 +53,8 @@
         <a href="#contact">Liên hệ</a>
       </div>
       <div class="auth-links" id="authLinks">
-        <a href="login.html" id="loginBtn">Đăng nhập</a>
-        <a href="signup.html" id="registerBtn">Đăng ký</a>
+        <a href="/Quan_Ly_Su_Kien/app/views/auth/login.php" id="loginBtn">Đăng nhập</a>
+        <a href="/Quan_Ly_Su_Kien/app/views/auth/SignUp.php" id="registerBtn">Đăng ký</a>
       </div>
     </div>
   </nav>
