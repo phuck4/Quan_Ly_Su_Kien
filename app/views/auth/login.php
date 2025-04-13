@@ -15,7 +15,7 @@
 <body>
     <div class="container mt-3">
         <!-- Form khách hàng -->
-        <div class="form-customer active"> <!-- Thêm class active để hiển thị mặc định -->
+        <div class="form-customer active">
             <!-- Chỉ gắn sự kiện onclick vào tiêu đề h2 để toggle form -->
             <h2 onclick="toggleForm('customer')">Khách hàng</h2>
             <div class="customer">
@@ -24,22 +24,22 @@
                     <!-- Input ẩn để gửi vai trò là Customer -->
                     <input type="hidden" name="vaiTro" value="Customer">
                     <div class="mb-3 mt-3">
-                        <label for="emailCustomer">Email:</label>
-                        <!-- Input email với name="email" để backend nhận dữ liệu -->
-                        <input type="email" class="form-control" id="emailCustomer" placeholder="Enter email" name="email" required />
+                        <label for="usernameCustomer">Tên người dùng:</label>
+                        <!-- Thay email thành tên người dùng, giữ name="email" để backend nhận dữ liệu -->
+                        <input type="text" class="form-control" id="usernameCustomer" placeholder="Nhập tên người dùng" name="email" required />
                     </div>
                     <div class="mb-3">
-                        <label for="pwdCustomer">Password:</label>
+                        <label for="pwdCustomer">Mật khẩu:</label>
                         <!-- Input mật khẩu với name="pswd" để backend nhận dữ liệu -->
-                        <input type="password" class="form-control" id="pwdCustomer" placeholder="Enter password" name="pswd" required />
+                        <input type="password" class="form-control" id="pwdCustomer" placeholder="Nhập mật khẩu" name="pswd" required />
                     </div>
                     <div class="form-check mb-3">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember" /> Remember me
+                            <input class="form-check-input" type="checkbox" name="remember" /> Ghi nhớ tôi
                         </label>
                     </div>
                     <!-- Nút submit để gửi form -->
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
                 </form>
             </div>
         </div>
@@ -54,22 +54,22 @@
                     <!-- Input ẩn để gửi vai trò là Admin -->
                     <input type="hidden" name="vaiTro" value="Admin">
                     <div class="mb-3 mt-3">
-                        <label for="emailAdmin">Email:</label>
-                        <!-- Input email với name="email" để backend nhận dữ liệu -->
-                        <input type="email" class="form-control" id="emailAdmin" placeholder="Enter email" name="email" required />
+                        <label for="usernameAdmin">Tên người dùng:</label>
+                        <!-- Thay email thành tên người dùng, giữ name="email" để backend nhận dữ liệu -->
+                        <input type="text" class="form-control" id="usernameAdmin" placeholder="Nhập tên người dùng" name="email" required />
                     </div>
                     <div class="mb-3">
-                        <label for="pwdAdmin">Password:</label>
+                        <label for="pwdAdmin">Mật khẩu:</label>
                         <!-- Input mật khẩu với name="pswd" để backend nhận dữ liệu -->
-                        <input type="password" class="form-control" id="pwdAdmin" placeholder="Enter password" name="pswd" required />
+                        <input type="password" class="form-control" id="pwdAdmin" placeholder="Nhập mật khẩu" name="pswd" required />
                     </div>
                     <div class="form-check mb-3">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember" /> Remember me
+                            <input class="form-check-input" type="checkbox" name="remember" /> Ghi nhớ tôi
                         </label>
                     </div>
                     <!-- Nút submit để gửi form -->
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
                 </form>
             </div>
         </div>

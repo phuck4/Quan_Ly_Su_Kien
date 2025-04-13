@@ -1,20 +1,26 @@
 <?php
-session_start();
-require_once __DIR__ . '/../../controllers/SuKienController.php';
-require_once __DIR__ . '/../../config/database.php';
-
-$suKienController = new SuKienController($conn);
-$suKienList = $suKienController->layTatCaSuKien();
+// Kiểm tra session (đã được kiểm tra trong index.php, nhưng để an toàn có thể giữ lại)
+if (!isset($_SESSION['user']) || $_SESSION['user']['vaiTro'] !== 'Customer') {
+    header("Location: /Quan_Ly_Su_Kien/app/views/auth/login.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <!-- Giữ nguyên phần head -->
+    <title>Trang Người Dùng</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/Quan_Ly_Su_Kien/public/assets/css/user.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <i class="fas fa-calendar-check me-2"></i>Quản lý Sự kiện
@@ -31,10 +37,10 @@ $suKienList = $suKienController->layTatCaSuKien();
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <span class="user-welcome">
-                        <i class="fas fa-user-circle me-1"></i> Xin chào, <?php echo $_SESSION['user']['tenDangNhap']; ?>
+                    <span class="user-welcome text-white me-3">
+                        <i class="fas fa-user-circle me-1"></i> Xin chào, <?php echo htmlspecialchars($_SESSION['user']['tenDangNhap']); ?>
                     </span>
-                    <a href="/controllers/AuthController.php?action=dangXuat" class="btn btn-light btn-sm ms-2">
+                    <a href="/Quan_Ly_Su_Kien/index.php?action=dangXuat" class="btn btn-light btn-sm">
                         <i class="fas fa-sign-out-alt me-1"></i> Đăng xuất
                     </a>
                 </div>
@@ -48,8 +54,12 @@ $suKienList = $suKienController->layTatCaSuKien();
             <!-- Đăng ký sự kiện -->
             <div class="tab-pane fade show active" id="registerEvent">
                 <div class="container">
-                    <div class="alert alert-success alert-dismissible fade" id="successAlert" role="alert">
+                    <div class="alert alert-success alert-dismissible fade" id="successAlert" role="alert" style="display: none;">
                         <i class="fas fa-check-circle me-2"></i> Đăng ký sự kiện thành công! Bạn sẽ được chuyển đến trang thanh toán.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade" id="errorAlert" role="alert" style="display: none;">
+                        <i class="fas fa-exclamation-circle me-2"></i> <span id="errorMessage"></span>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <div class="card">
@@ -57,7 +67,7 @@ $suKienList = $suKienController->layTatCaSuKien();
                             <h5 class="mb-0"><i class="fas fa-plus-circle me-2"></i>Đăng ký sự kiện mới</h5>
                         </div>
                         <div class="card-body">
-                            <form id="eventRegistrationForm" action="/controllers/SuKienController.php?action=dangKySuKien" method="POST">
+                            <form id="eventRegistrationForm" method="POST">
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <label class="form-label">Tên người đăng ký</label>
@@ -167,22 +177,28 @@ $suKienList = $suKienController->layTatCaSuKien();
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($suKienList as $suKien): ?>
+                                        <?php if (!empty($suKienList)): ?>
+                                            <?php foreach ($suKienList as $suKien): ?>
+                                                <tr>
+                                                    <td>SK<?php echo htmlspecialchars($suKien['maSK']); ?></td>
+                                                    <td><?php echo htmlspecialchars($suKien['tenSuKien'] ?? 'Không có tên'); ?></td>
+                                                    <td><?php echo htmlspecialchars($suKien['maLoai']); ?></td>
+                                                    <td><?php echo htmlspecialchars($suKien['ngayBatDau'] . ' - ' . $suKien['ngayKetThuc']); ?></td>
+                                                    <td><?php echo htmlspecialchars($suKien['diaDiem']); ?></td>
+                                                    <td>Chưa có</td>
+                                                    <td><span class="event-status status-pending">Chờ xác nhận</span></td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventDetailModal">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
                                             <tr>
-                                                <td>SK<?php echo $suKien['maSK']; ?></td>
-                                                <td><?php echo $suKien['tenSuKien']; ?></td>
-                                                <td><?php echo $suKien['maLoai']; ?></td>
-                                                <td><?php echo $suKien['ngayBatDau'] . ' - ' . $suKien['ngayKetThuc']; ?></td>
-                                                <td><?php echo $suKien['diaDiem']; ?></td>
-                                                <td>Chưa có</td>
-                                                <td><span class="event-status status-pending">Chờ xác nhận</span></td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventDetailModal">
-                                                        <i class="fas fa-eye"></i>
-                                                    </button>
-                                                </td>
+                                                <td colspan="8" class="text-center">Không có sự kiện nào.</td>
                                             </tr>
-                                        <?php endforeach; ?>
+                                        <?php endif; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -192,6 +208,39 @@ $suKienList = $suKienController->layTatCaSuKien();
             </div>
         </div>
     </div>
-    <script src="/Quan_Ly_Su_Kien/public/assets/JS/user.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#eventRegistrationForm').on('submit', function(e) {
+                e.preventDefault(); // Ngăn form submit mặc định
+
+                $.ajax({
+                    url: '/Quan_Ly_Su_Kien/index.php?action=dangKySuKien',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.success) {
+                            // Hiển thị thông báo thành công
+                            $('#successAlert').addClass('show').css('display', 'block');
+                            // Chuyển hướng sau 2 giây
+                            setTimeout(function() {
+                                window.location.href = '/Quan_Ly_Su_Kien/app/views/ThanhToan/thanhtoan.php?maSK=' + response.maSK;
+                            }, 2000);
+                        } else {
+                            // Hiển thị thông báo lỗi
+                            $('#errorMessage').text(response.message);
+                            $('#errorAlert').addClass('show').css('display', 'block');
+                        }
+                    },
+                    error: function() {
+                        // Hiển thị thông báo lỗi nếu AJAX thất bại
+                        $('#errorMessage').text('Có lỗi xảy ra. Vui lòng thử lại.');
+                        $('#errorAlert').addClass('show').css('display', 'block');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

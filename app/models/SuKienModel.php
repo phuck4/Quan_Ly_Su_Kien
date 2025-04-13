@@ -1,41 +1,57 @@
 <?php
-require_once __DIR__ . '/../config/database.php';
+if (!class_exists('SuKienModel')) {
+    class SuKienModel {
+        private $conn;
 
-class SuKienModel {
-    private $conn;
-
-    public function __construct($db) {
-        $this->conn = $db;
-    }
-
-    // Lấy tất cả sự kiện
-    public function LayTatCaSuKien() {
-        $sql = "SELECT * FROM sukien";
-        $result = $this->conn->query($sql);
-        $data = [];
-        while ($row = $result->fetch_assoc()) {
-            $data[] = $row;
+        public function __construct($conn) {
+            $this->conn = $conn;
         }
-        return $data;
-    }
 
-    // Đăng ký sự kiện mới
-    public function dangKySuKien($tenNguoiDangKy, $soDienThoai, $diaDiem, $ngayBatDau, $ngayKetThuc, $maLoai, $soNguoiThamGia, $moTaChiTietSuKien) {
-        $sql = "INSERT INTO sukien (tenNguoiDangKy, soDienThoai, diaDiem, ngayBatDau, ngayKetThuc, maLoai, soNguoiThamGia, moTaChiTietSuKien) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("sssssiis", $tenNguoiDangKy, $soDienThoai, $diaDiem, $ngayBatDau, $ngayKetThuc, $maLoai, $soNguoiThamGia, $moTaChiTietSuKien);
-        return $stmt->execute();
-    }
+        // Lấy tất cả sự kiện
+        public function layTatCaSuKien() {
+            $sql = "SELECT * FROM sukien";
+            $result = $this->conn->query($sql);
+            $data = [];
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
+                    $data[] = $row;
+                }
+                $result->free();
+            }
+            return $data;
+        }
 
-    // Lấy thông tin sự kiện theo mã sự kiện
-    public function laySuKienTheoMa($maSK) {
-        $sql = "SELECT * FROM sukien WHERE maSK = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("i", $maSK);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_assoc();
+        // Đăng ký sự kiện mới
+        public function dangKySuKien($tenSuKien, $tenNguoiDangKy, $soDienThoai, $diaDiem, $ngayBatDau, $ngayKetThuc, $maLoai, $soNguoiThamGia, $moTaChiTietSuKien) {
+            $sql = "INSERT INTO sukien (tenSuKien, tenNguoiDangKy, soDienThoai, diaDiem, ngayBatDau, ngayKetThuc, maLoai, soNguoiThamGia, moTaChiTietSuKien) 
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $stmt = $this->conn->prepare($sql);
+            $moTaChiTietSuKien = !empty($moTaChiTietSuKien) ? $moTaChiTietSuKien : null;
+            $stmt->bind_param("sssssssis", $tenSuKien, $tenNguoiDangKy, $soDienThoai, $diaDiem, $ngayBatDau, $ngayKetThuc, $maLoai, $soNguoiThamGia, $moTaChiTietSuKien);
+            $result = $stmt->execute();
+
+            if ($result) {
+                $maSK = $this->conn->insert_id;
+                $stmt->close();
+                return $maSK;
+            }
+
+            $stmt->close();
+            return false;
+        }
+
+        // Lấy thông tin sự kiện theo mã sự kiện
+        public function laySuKienTheoMa($maSK) {
+            $sql = "SELECT * FROM sukien WHERE maSK = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("i", $maSK);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $suKien = $result->fetch_assoc();
+
+            $stmt->close();
+            return $suKien;
+        }
     }
 }
 ?>

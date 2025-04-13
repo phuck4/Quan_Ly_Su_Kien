@@ -1,5 +1,5 @@
 <?php
-require_once 'app/models/TaiKhoanModel.php';
+require_once __DIR__ . '/../models/TaiKhoanModel.php';
 
 class AuthController {
     private $taiKhoanModel;
@@ -10,9 +10,14 @@ class AuthController {
 
     public function dangKy() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $tenDangNhap = $_POST['tenDangNhap'];
+            $tenDangNhap = filter_input(INPUT_POST, 'tenDangNhap', FILTER_SANITIZE_STRING);
             $matKhau = $_POST['matKhau'];
             $confirmMatKhau = $_POST['confirmMatKhau'];
+
+            if (empty($tenDangNhap) || empty($matKhau) || empty($confirmMatKhau)) {
+                echo "<script>alert('Vui lòng điền đầy đủ thông tin!'); window.location.href='/Quan_Ly_Su_Kien/app/views/auth/SignUp.php';</script>";
+                return;
+            }
 
             if ($matKhau !== $confirmMatKhau) {
                 echo "<script>alert('Mật khẩu xác nhận không khớp!'); window.location.href='/Quan_Ly_Su_Kien/app/views/auth/SignUp.php';</script>";
@@ -26,30 +31,35 @@ class AuthController {
                 echo "<script>alert('Đăng ký thất bại! Tên đăng nhập đã tồn tại.'); window.location.href='/Quan_Ly_Su_Kien/app/views/auth/SignUp.php';</script>";
             }
         } else {
-            include 'app/views/auth/SignUp.php';
+            include __DIR__ . '/../views/auth/SignUp.php';
         }
     }
 
     public function dangNhap() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = $_POST['email'];
+            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
             $matKhau = $_POST['pswd'];
-            $vaiTro = $_POST['vaiTro'];
+            $vaiTro = filter_input(INPUT_POST, 'vaiTro', FILTER_SANITIZE_STRING);
+
+            if (empty($email) || empty($matKhau) || empty($vaiTro)) {
+                echo "<script>alert('Vui lòng điền đầy đủ thông tin!'); window.location.href='/Quan_Ly_Su_Kien/app/views/auth/login.php';</script>";
+                return;
+            }
 
             $user = $this->taiKhoanModel->dangNhap($email, $matKhau);
             if ($user && $user['vaiTro'] === $vaiTro) {
                 $_SESSION['user'] = $user;
                 if ($vaiTro === 'Customer') {
-                    header("Location: /Quan_Ly_Su_Kien/app/views/NguoiDung/user.php");
+                    header("Location: /Quan_Ly_Su_Kien/index.php?action=user");
                 } else {
-                    header("Location: /Quan_Ly_Su_Kien/app/views/Quanly/quanly.php");
+                    header("Location: /Quan_Ly_Su_Kien/index.php?action=quanly");
                 }
                 exit();
             } else {
                 echo "<script>alert('Đăng nhập thất bại! Kiểm tra lại email, mật khẩu hoặc vai trò.'); window.location.href='/Quan_Ly_Su_Kien/app/views/auth/login.php';</script>";
             }
         } else {
-            include 'app/views/auth/login.php';
+            include __DIR__ . '/../views/auth/login.php';
         }
     }
 

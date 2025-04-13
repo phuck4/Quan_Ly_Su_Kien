@@ -1,32 +1,36 @@
 <?php
-require_once __DIR__ . 'Quan_Ly_Su_Kien/config/database.php';
+if (!class_exists('TaiKhoanModel')) {
+    class TaiKhoanModel {
+        private $conn;
 
-class TaiKhoanModel {
-    private $conn;
+        public function __construct($conn) {
+            $this->conn = $conn;
+        }
 
-    public function __construct($db) {
-        $this->conn = $db;
-    }
+        public function dangKy($tenDangNhap, $matKhau) {
+            $sql = "INSERT INTO taikhoan (tenDangNhap, matKhau, vaiTro) VALUES (?, ?, 'Customer')";
+            $stmt = $this->conn->prepare($sql);
+            $hashedPassword = password_hash($matKhau, PASSWORD_DEFAULT);
+            $stmt->bind_param("ss", $tenDangNhap, $hashedPassword);
+            $result = $stmt->execute();
+            $stmt->close();
+            return $result;
+        }
 
-    // Hàm đăng ký tài khoản
-    public function dangKy($tenDangNhap, $matKhau, $vaiTro = 'Customer') {
-        // Mã hóa mật khẩu bằng md5 (cách đơn giản, thực tế nên dùng password_hash)
-        $matKhauHash = md5($matKhau);
-        $sql = "INSERT INTO taikhoan (tenDangNhap, matKhau, vaiTro) VALUES (?, ?, ?)";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("sss", $tenDangNhap, $matKhauHash, $vaiTro);
-        return $stmt->execute();
-    }
+        public function dangNhap($email, $matKhau) {
+            $sql = "SELECT * FROM taikhoan WHERE tenDangNhap = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+            $stmt->close();
 
-    // Hàm kiểm tra đăng nhập
-    public function dangNhap($tenDangNhap, $matKhau) {
-        $matKhauHash = md5($matKhau);
-        $sql = "SELECT * FROM taikhoan WHERE tenDangNhap = ? AND matKhau = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("ss", $tenDangNhap, $matKhauHash);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_assoc(); // Trả về thông tin tài khoản nếu đúng
+            if ($user && password_verify($matKhau, $user['matKhau'])) {
+                return $user;
+            }
+            return false;
+        }
     }
 }
 ?>
